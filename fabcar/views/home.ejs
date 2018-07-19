@@ -59,6 +59,7 @@
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
+<% var user=["User ID", "Name User", "Date Of Birth", "Sex User", "Address User"] %>
 
 <body>
     <div class="container">
@@ -78,6 +79,21 @@
                     </form> 
                 </div>
             </div>
+        </div>
+        <div class="information" style="margin-top: 100px">
+            <form>
+                <% for(var i=0; i<5; i++) { %>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label"><% user[i] %></label>
+                        <div class="col-sm-10">
+                          <p>Nguyen Ba Hung</p>
+                        </div>
+                      </div>
+                <% } %>
+
+           
+                
+              </form>
         </div>
     </div>
 </body>

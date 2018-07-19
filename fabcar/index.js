@@ -54,9 +54,9 @@ var controller = require("./controller")(config);
 
 const request = {
     //targets : --- letting this default to the peers assigned to the channel
-    chaincodeId: "fabcar",
-    fcn: "queryAllCars",
-    args:  ['']
+    chaincodeId: "aaa1",
+    fcn: "getUserByID",
+    args:  ['3012']
 };
 
 // each method require different certificate of user
@@ -64,13 +64,17 @@ app.get("/home", function(req, res){
     controller
         .query("user1", request)
         .then(ret => {
-            console.log( "Query results: ",ret.toString());
             
-            res.render("home");
+            console.log( "Query results 23131: ",JSON.parse(ret.toString())[0]);
+            
+            hung1 = JSON.parse(ret.toString())[0];
+
+            console.log("colour hung", hung1.Record.colour);
+            res.render("home", {hung: hung1});
 
         })
         .catch(err => {
             console.error(err);
         });
 });
-app.listen(4000);
+app.listen(4200);

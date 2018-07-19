@@ -60,9 +60,9 @@ Fabric_Client.newDefaultKeyValueStore({ path: store_path
 	// must send the proposal to endorsing peers
 	var request = {
 		//targets: let default to the peer assigned to the client
-		chaincodeId: 'fabcar',
-		fcn: '',
-		args: [''],
+		chaincodeId: 'aaa2',
+		fcn: 'initProfile',
+		args: ["3012","10A1,Ha Huy Tap,2017-2018,Kante,Mbappe,Toan#9.3&Ly#9.5,Kha,Hoc sinh gioi tinh mon hoa hoc#Hoc sinh gioi tinh mon van","Tot nghiep cap 1#Tot nghiep cap 2"],
 		chainId: 'mychannel',
 		txId: tx_id
 	};
