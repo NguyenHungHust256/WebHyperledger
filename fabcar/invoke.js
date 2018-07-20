@@ -58,11 +58,20 @@ Fabric_Client.newDefaultKeyValueStore({ path: store_path
 	// createCar chaincode function - requires 5 args, ex: args: ['CAR12', 'Honda', 'Accord', 'Black', 'Tom'],
 	// changeCarOwner chaincode function - requires 2 args , ex: args: ['CAR10', 'Dave'],
 	// must send the proposal to endorsing peers
+	
+	// var request = {
+	// 	//targets: let default to the peer assigned to the client
+	// 	chaincodeId: 'aaa2',
+	// 	fcn: 'initProfile',
+	// 	args: ["3012","10A1,Ha Huy Tap,2017-2018,Kante,Mbappe,Toan#9.3&Ly#9.5,Kha,Hoc sinh gioi tinh mon hoa hoc#Hoc sinh gioi tinh mon van","Tot nghiep cap 1#Tot nghiep cap 2"],
+	// 	chainId: 'mychannel',
+	// 	txId: tx_id
+	// };
 	var request = {
 		//targets: let default to the peer assigned to the client
-		chaincodeId: 'aaa2',
-		fcn: 'initProfile',
-		args: ["3012","10A1,Ha Huy Tap,2017-2018,Kante,Mbappe,Toan#9.3&Ly#9.5,Kha,Hoc sinh gioi tinh mon hoa hoc#Hoc sinh gioi tinh mon van","Tot nghiep cap 1#Tot nghiep cap 2"],
+		chaincodeId: 'aaa1',
+		fcn: 'initUser',
+		args: ["3010","Nguyen Ba Hung","25-06-97","Nam","Nghe An"],
 		chainId: 'mychannel',
 		txId: tx_id
 	};
